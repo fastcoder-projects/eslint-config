@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "description": "quickly build eslint configurations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asdiver/eslint-config.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asdiver/eslint-config/issues"
+  },
+  "homepage": "https://github.com/asdiver/eslint-config#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint-plugin-vue": "^9.10.0"
+  }
+}
