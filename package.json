@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config",
+  "name": "@fastcoder/eslint-config",
   "version": "1.0.0",
   "description": "quickly build eslint configurations",
   "main": "index.js",
