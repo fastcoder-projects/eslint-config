@@ -1,16 +1,16 @@
 module.exports = {
-  "extends": [
+  extends: [
     'plugin:vue/vue3-recommended',
   ],
-  "overrides": [
+  overrides: [
   ],
-  "plugins": [
+  plugins: [
 
   ],
-  "rules": {
+  rules: {
     // plugin:vue/vue3-recommended 中集成的一些规则重写
 
     // 关闭vue模板 同行属性数目限制
-    'max-attributes-per-line':"off",
+    'max-attributes-per-line': 'off',
   },
-}
+};

@@ -8,7 +8,8 @@
     "url": "https://github.com/asdiver/eslint-config/issues"
   },
   "scripts": {
-    "test": ""
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@fastcoder/eslint-config": "workspace:*",
     "eslint": "^8.38.0",
     "typescript": "^5.0.4"
   }
