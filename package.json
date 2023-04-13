@@ -1,27 +1,23 @@
 {
-  "name": "@fastcoder/eslint-config",
-  "version": "1.0.0",
+  "name": "@fastcoder/eslint-config-monorepo",
+  "private": true,
+  "author": "asdiver",
   "description": "quickly build eslint configurations",
-  "main": "index.js",
+  "homepage": "https://github.com/asdiver/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/asdiver/eslint-config/issues"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asdiver/eslint-config.git"
   },
   "keywords": [
-    "eslint"
+    "eslint",
+    "config",
+    "eslint-config"
   ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/asdiver/eslint-config/issues"
-  },
-  "homepage": "https://github.com/asdiver/eslint-config#readme",
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
-    "eslint-plugin-vue": "^9.10.0"
-  }
+  "license": "MIT"
 }
