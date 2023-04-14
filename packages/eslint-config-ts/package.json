@@ -14,10 +14,14 @@
     "*.js"
   ],
   "peerDependencies": {
-    "eslint": ">=7.3.9"
+    "eslint": ">=7.3.9",
+    "typescript": ">=3.9"
   },
   "dependencies": {
-    "@fastcoder/eslint-config-base": "workspace:^1.0.0"
+    "@fastcoder/eslint-config-base": "workspace:^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint-import-resolver-typescript": "^3.5.5"
   },
   "devDependencies": {
     "eslint": "^8.38.0"
