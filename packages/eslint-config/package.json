@@ -1,0 +1,26 @@
+{
+  "name": "@fastcoder/eslint-config",
+  "version": "1.0.0",
+  "author": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.3.9"
+  },
+  "dependencies": {
+    "@fastcoder/eslint-config-base": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0"
+  },
+  "license": "MIT"
+}
