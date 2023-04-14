@@ -1,12 +1,26 @@
 {
   "name": "@fastcoder/eslint-config-vue",
   "version": "1.0.0",
+  "author": "",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --config=index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eslint-config"
+  ],
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.3.9"
+  },
+  "dependencies": {
+    "@fastcoder/eslint-config-base": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0"
+  },
   "license": "MIT"
 }
