@@ -25,8 +25,9 @@
   "devDependencies": {
     "@fastcoder/eslint-config": "workspace:*",
     "eslint": "^8.38.0",
-    "typescript": "^5.0.4",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "@commitlint/cli": "^17.6.1",
