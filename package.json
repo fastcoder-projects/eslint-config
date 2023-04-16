@@ -9,7 +9,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "fix": "eslint . --fix"
+    "fix": "eslint . --fix",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,10 @@
   "license": "MIT",
   "devDependencies": {
     "@fastcoder/eslint-config": "workspace:*",
+    "@fastcoder/eslint-config-ts": "workspace:*",
+    "@types/eslint": "^8.37.0",
     "eslint": "^8.38.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
   }
-}^5.0.4
+}
