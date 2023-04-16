@@ -1,3 +1,4 @@
+import { resolve } from 'node:path';
 import { describe, test, expect } from 'vitest';
 import { ESLint } from 'eslint';
 
@@ -6,9 +7,11 @@ function getText(data: string) {
 }
 
 const eslint = new ESLint({
-  extensions: [
-    '../index.js',
-  ],
+  baseConfig: {
+    extends: [
+      resolve(__dirname, '../index.js'),
+    ],
+  },
 });
 
 // 配置正常运行
