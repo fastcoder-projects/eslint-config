@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "test": "vitest run",
-    "publish": "publish",
+    "publish": "pnpm -r publish",
     "release": "bumpp -r && publish"
   },
   "repository": {
