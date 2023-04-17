@@ -13,7 +13,7 @@
   ],
   "files": [
     "*.js",
-    "./libs/*.js"
+    "libs"
   ],
   "peerDependencies": {
     "eslint": ">=7.3.9"
