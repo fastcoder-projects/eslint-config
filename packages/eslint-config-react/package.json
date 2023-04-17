@@ -1,6 +1,6 @@
 {
   "name": "@fastcoder/eslint-config-react",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "author": "",
   "description": "",
   "main": "index.js",
@@ -21,6 +21,9 @@
   },
   "devDependencies": {
     "eslint": "^8.38.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT"
 }

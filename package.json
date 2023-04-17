@@ -9,7 +9,11 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "fix": "eslint . --fix"
+    "fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "publish": "pnpm -r publish",
+    "release": "bumpp -r && pnpm run publish"
   },
   "repository": {
     "type": "git",
@@ -23,7 +27,15 @@
   "license": "MIT",
   "devDependencies": {
     "@fastcoder/eslint-config": "workspace:*",
+    "@fastcoder/eslint-config-ts": "workspace:*",
+    "@types/eslint": "^8.37.0",
+    "@vitest/ui": "^0.30.1",
+    "bumpp": "^9.1.0",
+    "consola": "^3.0.2",
     "eslint": "^8.38.0",
-    "typescript": "^5.0.4"
-  }
+    "local-pkg": "^0.4.3",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "version": "1.0.4"
 }
