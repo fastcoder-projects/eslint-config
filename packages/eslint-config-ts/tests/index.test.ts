@@ -1,5 +1,5 @@
 import { resolve } from 'node:path';
-import { writeFileSync, readFileSync, mkdirSync, rmdirSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
 import { describe, test, expect } from 'vitest';
@@ -15,7 +15,7 @@ describe('eslint-config-ts', () => {
   const tempPath = getPath('../test-temp');
 
   // 先清除
-  existsSync(tempPath) && rmdirSync(tempPath, {
+  existsSync(tempPath) && rmSync(tempPath, {
     recursive: true,
   });
 
