@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "publish": "pnpm -r publish",
-    "release": "bumpp -r && npm run publish"
+    "release": "bumpp -r && pnpm run publish"
   },
   "repository": {
     "type": "git",
