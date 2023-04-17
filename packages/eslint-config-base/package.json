@@ -12,9 +12,9 @@
     "eslint-config"
   ],
   "files": [
-    "*.js"
+    "*.js",
+    "./libs/*.js"
   ],
-  "license": "MIT",
   "peerDependencies": {
     "eslint": ">=7.3.9"
   },

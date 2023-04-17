@@ -1,48 +1,60 @@
 import { resolve } from 'node:path';
+import { writeFileSync, readFileSync, mkdirSync, rmdirSync, existsSync } from 'node:fs';
+import { exec } from 'node:child_process';
+import { promisify } from 'node:util';
 import { describe, test, expect } from 'vitest';
-import { ESLint } from 'eslint';
+import consola from 'consola';
 
-function getText(data: string) {
-  return data;
-}
-
-const eslint = new ESLint({
-  baseConfig: {
-    extends: [
-      resolve(__dirname, '../index.js'),
-    ],
-  },
-});
+const execSyc = promisify(exec);
 
 // 配置正常运行
 describe('eslint-config-ts', () => {
-  test('a is assigned a value but never used.', async () => {
-    const testText = getText(`
-      const a = '';
-    `);
-    const { messages } = (await eslint.lintText(testText))[0];
-    const result = messages.find((item) => {
-      if (item.ruleId === '@typescript-eslint/no-unused-vars') {
-        return true;
-      }
-      return false;
-    });
-    const rule = '\'a\' is assigned a value but never used.';
-    expect(result?.message).toBe(rule);
+  const getPath = (path: string) => {
+    return resolve(__dirname, path);
+  };
+  const tempPath = getPath('../test-temp');
+
+  // 先清除
+  existsSync(tempPath) && rmdirSync(tempPath, {
+    recursive: true,
   });
 
-  test('missing semicolon.', async () => {
-    const testText = getText(`
-      const a = ''
-    `);
-    const { messages } = (await eslint.lintText(testText))[0];
-    const result = messages.find((item) => {
-      if (item.ruleId === '@typescript-eslint/semi') {
-        return true;
+  // 再创建
+  mkdirSync(tempPath);
+
+  test('lint success', async () => {
+    const isSuccess = true;
+    const data = readFileSync(getPath('./data/success-example.txt'));
+    writeFileSync(`${tempPath}/success-example.ts`, data);
+    try {
+      await execSyc(`cd ${resolve(__dirname, '../')} && pnpm run lint`);
+      expect(isSuccess).toBe(true);
+    }
+    catch (error) {
+      consola.info('3333', error.stdout);
+      throw error;
+    }
+  });
+
+  test('lint fail', async () => {
+    const data = readFileSync(getPath('./data/error-example.txt'));
+    writeFileSync(`${tempPath}/error-example.ts`, data);
+    try {
+      await execSyc(`cd ${resolve(__dirname, '../')} && pnpm run lint`);
+    }
+    catch (error) {
+      // 应该正确报错
+      if (
+        !String(error.stdout).includes('Missing semicolon')
+      ) {
+        consola.info('lint fail --> error', error.stdout);
+        throw new Error(error);
       }
-      return false;
-    });
-    const rule = 'Missing semicolon.';
-    expect(result?.message).toBe(rule);
+      // 测试
+      expect(String(error.stdout)).toContain('Missing semicolon');
+      return;
+    }
+    // 默认应该报错被捕获
+    expect(true).toBe(false);
   });
 });
