@@ -1,7 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { isPackageExists } = require('local-pkg');
+
+const isTs = isPackageExists('typescript');
+
 module.exports = {
   extends: [
+    isTs ? '@fastcoder/eslint-config-ts' : '@fastcoder/eslint-config-base',
     'plugin:vue/vue3-recommended',
   ],
+  parser: 'vue-eslint-parser',
+  parserOptions: isTs ? { parser: '@typescript-eslint/parser' } : {},
   plugins: [
   ],
   rules: {
@@ -10,14 +18,4 @@ module.exports = {
     // 关闭vue模板 同行属性数目限制
     'max-attributes-per-line': 'off',
   },
-};
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { isPackageExists } = require('local-pkg');
-
-const isTs = isPackageExists('typescript');
-
-module.exports = {
-  extends: [
-    isTs ? 'ts' : 'js',
-  ],
 };
