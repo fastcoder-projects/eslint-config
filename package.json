@@ -14,6 +14,7 @@
     "test:ui": "vitest --ui",
     "publish": "pnpm -r publish",
     "release": "bumpp -r && pnpm run publish",
+    "pre-release": "tsx ./scripts/pre-release.ts",
     "feature": "tsx ./scripts/create-feature.ts"
   },
   "repository": {
