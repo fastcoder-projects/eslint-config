@@ -17,7 +17,7 @@
     "eslint": ">=7.3.9"
   },
   "dependencies": {
-    "@fastcoder/eslint-config-base": "workspace:^1.0.0"
+    "@fastcoder/eslint-config-base": "workspace:^"
   },
   "devDependencies": {
     "eslint": "^8.38.0"
