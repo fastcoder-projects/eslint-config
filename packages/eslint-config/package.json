@@ -1,6 +1,6 @@
 {
   "name": "@fastcoder/eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5-beta.0",
   "author": "",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "eslint": ">=7.3.9"
   },
   "dependencies": {
-    "@fastcoder/eslint-config-base": "workspace:^1.0.0"
+    "@fastcoder/eslint-config-base": "workspace:^"
   },
   "devDependencies": {
     "eslint": "^8.38.0"

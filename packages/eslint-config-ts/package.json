@@ -1,6 +1,6 @@
 {
   "name": "@fastcoder/eslint-config-ts",
-  "version": "1.0.4",
+  "version": "1.0.5-beta.0",
   "author": "",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@fastcoder/eslint-config-base": "workspace:*",
+    "@fastcoder/eslint-config-base": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0"
   },
