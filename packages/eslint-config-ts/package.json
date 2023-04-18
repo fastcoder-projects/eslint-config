@@ -1,12 +1,32 @@
 {
   "name": "@fastcoder/eslint-config-ts",
-  "version": "1.0.0",
+  "version": "1.0.4",
+  "author": "",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --config=index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eslint-config"
+  ],
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.3.9",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@fastcoder/eslint-config-base": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT"
 }

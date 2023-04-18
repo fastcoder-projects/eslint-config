@@ -1,5 +1,5 @@
 {
   "extends": [
-    "@fastcoder/eslint-config"
+    "@fastcoder/eslint-config-ts"
   ]
 }
