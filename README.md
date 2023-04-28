@@ -14,4 +14,4 @@ quickly build eslint configurations
 
 @fastcoder/eslint-config-vue
 
-@fastcoder/eslint-config-vue-ts
+@fastcoder/eslint-config-ts
