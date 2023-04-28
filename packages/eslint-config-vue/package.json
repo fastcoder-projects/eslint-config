@@ -17,12 +17,14 @@
     "eslint": ">=7.3.9"
   },
   "dependencies": {
-    "@fastcoder/eslint-config-base": "workspace:^",
-    "@fastcoder/eslint-config-ts": "workspace:^",
-    "eslint-plugin-vue": "^9.11.0"
+    "@fastcoder/eslint-config-base": "workspace:*",
+    "@fastcoder/eslint-config-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.11.0",
+    "local-pkg": "^0.4.3"
   },
   "devDependencies": {
-    "eslint": "^8.38.0"
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4"
   },
   "publishConfig": {
     "access": "public"
