@@ -1,5 +1,11 @@
 module.exports = {
   extends: [
-    '@fastcoder/eslint-config-base',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    '@fastcoder/eslint-config-ts',
+    './libs/ant-design.js',
   ],
+  rules: {
+    // other
+  },
 };
